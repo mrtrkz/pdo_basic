@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <title>doğrulama örnekleri</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <script src="js/jquery-1.10.2.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            $.validator.setDefaults({ submitHandler: function() { $("#signupForm").submit(); }   });
+            $().ready(function() { $("#signupForm").validate();    });
+        </script>
+        <style type="text/css">
+			#signupForm { width: 670px; }
+			#signupForm label.error {margin-left: 10px;	width: auto; display: inline; color:red;}
+        </style> 
+    </head>
+    <body>
+        <div id="main">
+            <br>
+            <div class="panel panel-default">
+            	<div class="panel-heading"><h3><span class="label label-primary">Yeni Kayıt Formu</span></h3></div>
+                <div class="panel-body">
+                    <form class="cmxform" id="signupForm" method="post" action="kayit2.php">
+                        <table>
+                            <tr>
+                                <td width="100"><span class="label label-default">Numara</span></td>
+                                <td><input id="numara" name="numara" type="text" required></td>
+                            </tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr>
+                                <td><span class="label label-default">Adı Soyadı</span></td>
+                                <td><input id="ad" name="ad" type="text" required></td>
+                            </tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr>
+                                <td><span class="label label-default">Sınıf</span></td>
+                                <td><input id="sinif" name="sinif" type="text" required></td>
+                            </tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr>
+                                <td><span class="label label-default">Alan</span></td>
+                                <td><input id="alan" name="alan" type="text" required></td>
+                            </tr>
+                        </table>
+                  </div>
+              	  <div class="panel-footer">
+                        <input class="btn btn-primary" type="submit" value="Kayıt"/>
+                        <a class="btn btn-warning" href="index2.php">Vazgeç</a>
+                    </form>
+              	  </div>
+            </div>
+         </div>
+    </body>
+</html>
